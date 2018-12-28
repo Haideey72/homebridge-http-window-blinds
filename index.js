@@ -61,7 +61,7 @@ HttpWindowBlinds.prototype = {
             			this.log('HTTP bad response (' + ops.uri + '): ' + error.message);
          		} else {
             			try {
-               				value = JSON.parse(body).position;
+               				value = body;
                				if (value < this.minOpen || value > this.maxOpen || isNaN(value)) {
 						throw "Invalid value received";
                				}
